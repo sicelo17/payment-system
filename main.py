@@ -58,12 +58,12 @@ def Ref():
     CoFJ= float(Female_Jeans.get())
     CoC = float(Cap.get())
 
-    CostofMale_Jeans = CoMJ * 0.99
-    CostofT_Shirt = CoT * 1.00
-    CostofMale_Formal_Shoe = CoMFS * 2.99
-    CostofSandals = CoS * 2.87
-    CostofFemale_Jeans = CoFJ * 2.89
-    CostofCap = CoC * 2.69
+    CostofMale_Jeans = CoMJ * 19.50
+    CostofT_Shirt = CoT * 8.00
+    CostofMale_Formal_Shoe = CoMFS * 29.99
+    CostofSandals = CoS * 12.87
+    CostofFemale_Jeans = CoFJ * 21.89
+    CostofCap = CoC * 4.69
 
     CostofMeal = '$', str('%.2f' % (CostofMale_Jeans + CostofT_Shirt + CostofMale_Formal_Shoe + CostofSandals + CostofFemale_Jeans + CostofCap))
 
