@@ -10,7 +10,7 @@ root.title("Payments Service")
 text_input = StringVar()
 operator = ''
 
-Tops = Frame(root, width = 1600, height = 50, bg = "powder blue", relief = SUNKEN)
+Tops = Frame(root, width = 1600, height = 50, bg = "#659DBD", relief = SUNKEN)
 Tops.pack(side = TOP) 
 
 f1 = Frame(root, width = 700, height = 700, relief = SUNKEN)
@@ -24,7 +24,7 @@ localtime = time.asctime(time.localtime(time.time()))
 lblInfo = Label(Tops, font = ('arial', 50, 'bold'), text = "Payment Service App", fg = "Steel Blue", bd=10, anchor = 'w')
 lblInfo.grid(row = 0, column = 0)
 
-lblInfo = Label(Tops, font = ('arial', 20, 'bold'), text = localtime, fg = "Steel Blue", bd=10, anchor = 'w')
+lblInfo = Label(Tops, font = ('arial', 20, 'bold'), text = localtime, fg = "#659DBD", bd=10, anchor = 'w')
 lblInfo.grid(row = 1, column = 0)
 
 # ===================================================Calculator===================================================================
@@ -50,6 +50,7 @@ def Ref():
     x = random.randint(12908, 500876)
     randomRef= str(x)
     rand.set(randomRef)
+
 
     CoMJ = float(Male_Jeans.get())
     CoT = float(T_Shirt.get())
@@ -107,6 +108,7 @@ def Reset():
     Female_Jeans.set("")
 
 
+
 txtDisplay = Entry(f2, font = ('arial', 20, 'bold'), textvariable = text_input, bd = 30, insertwidth = 4, bg = "powder blue", justify = 'right')
 txtDisplay.grid(columnspan = 4)
 
@@ -141,7 +143,7 @@ Multiplication = Button(f2, padx=16, pady=16, bd=8, fg="black", font=('arial', 2
 
 btn0 = Button(f2, padx=16, pady=16, bd=8, fg="black", font=('arial', 20, 'bold'), text='0', bg = 'powder blue', command=lambda: btnClick(0)).grid(row=5,column=0)
 btnclear = Button(f2, padx=16, pady=16, bd=8, fg="black", font=('arial', 20, 'bold'), text='CE', bg = 'powder blue', command= btnClearDsiplay).grid(row=5,column=1)
-btnequal = Button(f2, padx=16, pady=16, bd=8, fg="black", font=('arial', 20, 'bold'), text='=', bg = 'powder blue', command = btnEqualsInput).grid(row=5,column=2)
+btnequal = Button(f2, padx=16, pady=16, bd=8, fg="black", font=('arial', 20, 'bold'), text='=', bg = '#659DBD', command = btnEqualsInput).grid(row=5,column=2)
 Division = Button(f2, padx=16, pady=16, bd=8, fg="black", font=('arial', 20, 'bold'), text='/', bg = 'powder blue', command=lambda: btnClick('/')).grid(row=5,column=3)
 
 # ============================================================ Labels and buttons =============================================
@@ -177,7 +179,7 @@ txtSandals = Entry(f1, font =('arial', 16, 'bold'), textvariable = Sandals, bd =
 lblCheese = Label(f1, font=('arial', 16, 'bold'), text = 'Female Jeans', bd=16, anchor = 'w').grid(row=5, column=0)
 txtCheese = Entry(f1, font =('arial', 16, 'bold'), textvariable = Female_Jeans, bd =10, insertwidth= 4, bg = 'powder blue', justify = 'right').grid(row=5, column=1)
 
-# ========================================== Restaurant Info 2 =================================================================
+# ========================================== Shop Info ==============================================================
 lblCap = Label(f1, font=('arial', 16, 'bold'), text = 'Cap', bd=16, anchor = 'w').grid(row=0, column=2)
 txtCap = Entry(f1, font =('arial', 16, 'bold'), textvariable = Cap, bd=10, insertwidth=4, bg='#ffffff', justify = "right").grid(row=0, column=3)
 
@@ -187,7 +189,7 @@ txtCost= Entry(f1, font =('arial', 16, 'bold'), textvariable = Cost, bd =10, ins
 lblService = Label(f1, font=('arial', 16, 'bold'), text = 'Service Charge', bd=16, anchor = 'w').grid(row=2, column=2)
 txtService = Entry(f1, font =('arial', 16, 'bold'), textvariable = Service_Charge, bd =10, insertwidth= 4, bg='#ffffff', justify = "right").grid(row=2, column=3)
 
-lblStateTax = Label(f1, font=('arial', 16, 'bold'), text = 'State Tax', bd=16, anchor = 'w').grid(row=3, column=2)
+lblStateTax = Label(f1, font=('arial', 16, 'bold'), text = 'VAT', bd=16, anchor = 'w').grid(row=3, column=2)
 txtStateTax = Entry(f1, font =('arial', 16, 'bold'), textvariable = Tax, bd =10, insertwidth= 4, bg = '#ffffff', justify = 'right').grid(row=3, column=3)
 
 lblSubTotal = Label(f1, font=('arial', 16, 'bold'), text = 'Sub Total', bd=16, anchor = 'w').grid(row=4, column=2)
@@ -196,12 +198,12 @@ txtSubTotal = Entry(f1, font =('arial', 16, 'bold'), textvariable = SubTotal, bd
 lblTotalCost = Label(f1, font=('arial', 16, 'bold'), text = 'Total Cost', bd=16, anchor = 'w').grid(row=5, column=2)
 txtTotalCost = Entry(f1, font =('arial', 16, 'bold'), textvariable = Total, bd =10, insertwidth= 4, bg = '#ffffff', justify = 'right').grid(row=5, column=3)
 
-# ============================================================ Buttons ======================================================================
+# ================================== Buttons ==================================================================
 
-btnTotal = Button(f1, padx=16, pady=8, bd=16, fg='black',font=('arial', 16, 'bold'), width=20, text='Total', bg='powder blue', command = Ref).grid(row=7, column=1)
+btnTotal = Button(f1, padx=16, pady=8, bd=16, fg='black',font=('arial', 16, 'bold'), width=20, text='Total', bg='#659DBD', command = Ref).grid(row=7, column=1)
 
-btnReset = Button(f1, padx=16, pady=8, bd=16, fg='black',font=('arial', 16, 'bold'), width=10, text='Reset', bg='powder blue', command = Reset).grid(row=7, column=2)
+btnReset = Button(f1, padx=16, pady=8, bd=16, fg='black',font=('arial', 16, 'bold'), width=10, text='Reset', bg='#659DBD', command = Reset).grid(row=7, column=2)
 
-btnExit = Button(f1, padx=16, pady=8, bd=16, fg='black',font=('arial', 16, 'bold'), width=10, text='Exit', bg='powder blue', command = qExit).grid(row=7, column=3)
+btnExit = Button(f1, padx=16, pady=8, bd=16, fg='black',font=('arial', 16, 'bold'), width=10, text='Exit', bg='#659DBD', command = qExit).grid(row=7, column=3)
 
 root.mainloop()
